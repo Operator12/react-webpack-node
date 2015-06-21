@@ -36,3 +36,4 @@ require('./config/express')(app, passport);
 require('./config/routes')(app, passport);
 
 server.listen(app.get('port'));
+console.log(app.get('port'));
