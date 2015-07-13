@@ -40,18 +40,17 @@ export default class Vote extends React.Component {
       topics: TopicStore.getState().topics,
       newTopic: TopicStore.getState().newTopic
     });
-  }
+  };
 
   render() {
     return (
       <div className="vote">
         <EntryBox topic={this.state.newTopic} />
         <MainSection topics={this.state.topics} />
-        <Scoreboard topics={this.state.topics} />
       </div>
     );
   }
-}
+};
 
 Vote.propTypes = {
   topics: React.PropTypes.instanceOf(Immutable.OrderedMap),

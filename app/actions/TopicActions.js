@@ -1,5 +1,6 @@
 import alt from 'altInstance';
 import TopicWebAPIUtils from 'utils/TopicWebAPIUtils';
+import process from 'utils/parser';
 
 /*
  * Declaring TopicActions using ES2015. This is equivalent to creating
@@ -15,6 +16,7 @@ class TopicActions {
   create(text) {
     // Remove whitespace
     if (text.trim().length > 0) {
+      text = process(text);
       // Using the current timestamp in place of a real id.
       const id = Date.now().toString();
       const data = {
