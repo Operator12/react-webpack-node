@@ -9,7 +9,7 @@ export default class MainSection extends React.Component {
     }).toArray();
     return (
       <div className="main-section">
-        <h3 className="main-section__header">Vote for your favorite hack day idea</h3>
+        <h3 className="main-section__header">Готовые ответы для клиента</h3>
         <ul className="main-section__list">{topics}</ul>
       </div>
     );

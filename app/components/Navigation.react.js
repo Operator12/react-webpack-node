@@ -28,21 +28,17 @@ export default class Navigation extends React.Component {
     this.setState({
       user: UserStore.getState().user
     });
-  }
+  };
 
   _onLogout = () => {
     UserActions.logout();
-  }
+  };
 
   render() {
-    const loginOrOut = this.state.user.get('authenticated') ?
-      <Link onClick={this._onLogout} className="navigation__item" to="logout">Logout</Link> :
-      <Link className="navigation__item" to="login">Log in</Link>;
     return (
       <nav className="navigation" role="navigation">
-          <Link to="/" className="navigation__item navigation__item--logo" activeClassName="navigation__item--active">Ninja Ocean</Link>
-          { loginOrOut }
-          <Link to="about" className="navigation__item" activeClassName="navigation__item--active">About</Link>
+          <Link to="/" className="navigation__item navigation__item--logo" activeClassName="navigation__item--active">Обработка данных с ITC</Link>
+          <Link to="about" className="navigation__item" activeClassName="navigation__item--active">Описание</Link>
       </nav>
     );
   }

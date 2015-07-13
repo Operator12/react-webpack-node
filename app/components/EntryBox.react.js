@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import TopicActions from 'actions/TopicActions';
 import TopicTextInput from 'components/TopicTextInput.react';
 
@@ -11,17 +11,17 @@ export default class EntryBox extends React.Component {
    */
   _onSave = (text) => {
     TopicActions.create(text);
-  }
+  };
 
   _onChange = (text) => {
     TopicActions.typing(text);
-  }
+  };
 
   render() {
     return (
       <div className="entrybox">
-        <h1 className="entrybox__header">Vote for your top hack idea</h1>
-        <TopicTextInput className="entrybox__input" value={this.props.topic} placeholder="What's yer fav idea?" onChange={this._onChange} onSave={this._onSave} />
+        <h1 className="entrybox__header">Введи строку заблокированной суммы из ITC</h1>
+        <TopicTextInput className="entrybox__input" value={this.props.topic} placeholder="Строка из ITC" onChange={this._onChange} onSave={this._onSave} />
       </div>
     );
   }

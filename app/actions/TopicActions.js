@@ -17,6 +17,10 @@ class TopicActions {
     // Remove whitespace
     if (text.trim().length > 0) {
       text = process(text);
+      if (! text){
+        return;
+      }
+
       // Using the current timestamp in place of a real id.
       const id = Date.now().toString();
       const data = {
