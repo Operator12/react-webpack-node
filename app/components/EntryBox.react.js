@@ -1,6 +1,7 @@
 import React from "react";
 import TopicActions from 'actions/TopicActions';
 import TopicTextInput from 'components/TopicTextInput.react';
+import process from '../utils/parser';
 
 export default class EntryBox extends React.Component {
   /**
@@ -18,10 +19,17 @@ export default class EntryBox extends React.Component {
   };
 
   render() {
+    //var result = process(this.props.topic);
+    var errorMessage;
+    if (!process(this.props.topic) && this.props.topic !== "") {
+      errorMessage = <div className="entrybox__footer">Данные введены не корректно!</div>;
+    }
+
     return (
       <div className="entrybox">
         <h1 className="entrybox__header">Введи строку заблокированной суммы из ITC</h1>
         <TopicTextInput className="entrybox__input" value={this.props.topic} placeholder="Строка из ITC" onChange={this._onChange} onSave={this._onSave} />
+        {errorMessage}
       </div>
     );
   }

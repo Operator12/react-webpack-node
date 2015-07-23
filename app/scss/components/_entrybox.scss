@@ -1,5 +1,5 @@
 .entrybox {
-	
+
 	width: 100%;
 	margin-bottom: 71.796875px;
 	margin-bottom: 5vw;
@@ -14,6 +14,17 @@
 
 	}
 
+	// .entrybox__footer
+	&__footer {
+
+		text-align: center;
+		font-size: 25.5679012345679px;
+		font-size: 1.506789248753209vw;
+		color: red;
+
+	}
+
+
 	// .entrybox__input
 	&__input {
 
@@ -25,8 +36,8 @@
   	height: 5vw;
   	line-height: 71.796875px;
   	line-height: 5vw;
-  	font-size: 37.925925925925924px;
-  	font-size: 2.6300919365649067vw;
+  	font-size: 17.925925925925924px;
+  	font-size: 1.6300919365649067vw;
   	border-width: 0 0 2px 0;
   	border-bottom: 2px solid #000;
 

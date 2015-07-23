@@ -60,11 +60,11 @@ module.exports = [
 
     },
     module: {
-      preLoaders: [{
-        test: /\.js$|.jsx$/,
-        exclude: /node_modules/,
-        loaders: ["eslint"]
-      }],
+      // preLoaders: [{
+      //   test: /\.js$|.jsx$/,
+      //   exclude: /node_modules/,
+      //   loaders: ["eslint"]
+      // }],
       loaders: commonLoaders.concat([
         { test: /\.css$/, loader: "style!css" },
         { test: /\.scss$/,

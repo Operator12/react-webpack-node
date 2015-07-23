@@ -32,13 +32,13 @@ class TopicActions {
       // This dispatches for views to make optimistic updates
       this.dispatch(data);
       // Makes an additional call to the server API and actually adds the topic
-      TopicWebAPIUtils.addTopic(data)
-        .done(function success() {
-          // We might not need to do anything it successfully added due to optimistic updates.
-        })
-        .fail(function failure() {
-          // dispatch an event if fails to notify user that it has failed
-        });
+      // TopicWebAPIUtils.addTopic(data)
+      //   .done(function success() {
+      //     // We might not need to do anything it successfully added due to optimistic updates.
+      //   })
+      //   .fail(function failure() {
+      //     // dispatch an event if fails to notify user that it has failed
+      //   });
     }
   }
 
