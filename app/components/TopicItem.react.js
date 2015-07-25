@@ -18,8 +18,8 @@ export default class TopicItem extends React.Component {
     return (
       <li className="topic-item" key={this.props.id}>
         <span className="topic-item__topic">{this.props.text}</span>
-        <button className="topic-item__button topic-item__button--increment" onClick={this._onIncrement}>+</button>
-        <button className="topic-item__button topic-item__button--decrement" onClick={this._onDecrement}>-</button>
+        {/*<button className="topic-item__button topic-item__button--increment" onClick={this._onIncrement}>+</button>
+        <button className="topic-item__button topic-item__button--decrement" onClick={this._onDecrement}>-</button>*/}
         <button className="topic-item__button topic-item__button--destroy" onClick={this._onDestroyClick}>{String.fromCharCode(215)}</button>
       </li>
     );

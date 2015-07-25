@@ -32,7 +32,7 @@ export default class TopicTextInput extends React.Component {
 
   render() {
     return (
-      <input className={this.props.className} placeholder={this.props.placeholder} onChange={this._onChange}
+      <textarea className={this.props.className} placeholder={this.props.placeholder} onChange={this._onChange}
         onKeyDown={this._onKeyDown} value={this.props.value}
         autoFocus={true} />
     );
